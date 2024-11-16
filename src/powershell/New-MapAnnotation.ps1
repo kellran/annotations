@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
@@ -108,7 +108,7 @@ $PositionAnnotation = @"
   MapAnnotationNode$AnnotationNumber =
   {
     Enabled = true
-    Type = "position"
+    Type = "grenade"
     Id = "$PositionGuid"
     SubType = "main"
     Position = $position
