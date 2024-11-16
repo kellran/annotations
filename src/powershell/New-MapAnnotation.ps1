@@ -1,8 +1,19 @@
 ﻿<#
 .SYNOPSIS
-    This script creates a new map annotation based of a setpos from cs2.
+  This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
-    Takes an input of a setpos and creates a 'spot' and 'position' map annotation
+  Takes an input of a setpos and creates a 'spot' and 'position' map annotation
+.PARAMETER name
+  The name of the lineup
+.PARAMETER setpos
+  The setpos including the angle, e.g.
+  setpos 916.032471 1123.968750 64.906296;setang -57.785061 77.579124 0.000000
+.PARAMETER mapName
+  The name of the map, e.g. de_mirage
+.PARAMETER movement
+  The movement type of the lineup, e.g. jump-throw
+.PARAMETER distance
+  The distance type of the lineup, e.g. left-click
 #>
 param(
     [Parameter(Mandatory)]
@@ -25,9 +36,6 @@ param(
 
 $RootPath = "$PSScriptRoot/../../"
 
-# Sample position - jumpthrow
-# setpos 916.032471 1123.968750 64.906296;setang -57.785061 77.579124 0.000000
-
 # Validate input
 if ($setpos -notmatch "^setpos (?<StandingX>-?\d+\.\d+) (?<StandingY>-?\d+\.\d+) (?<StandingZ>-?\d+\.\d+);setang (?<AngleX>-?\d+\.\d+) (?<AngleY>-?\d+\.\d+) (?<AngleZ>-?\d+\.\d+)$") {
     throw "Invalid setpos: $setpos"
@@ -38,7 +46,7 @@ $angle = "[ $($Matches['AngleX']), $($Matches['AngleY']), $($Matches['AngleZ']) 
 $position = "[ $($Matches['StandingX']), $($Matches['StandingY']), $($Matches['StandingZ']) ]"
 
 # Find the map, create it if it doesn't exist
-$MapFileInfo = Get-Item -Path "$mapName.txt" -ErrorAction "SilentlyContinue"
+$MapFileInfo = Get-Item -Path "$RootPath/$mapName.txt" -ErrorAction "SilentlyContinue"
 if ($null -eq $MapFileInfo) {
     $MapFileInfo = New-Item -Path "$mapName.txt" -ItemType "file"
     $FileHeader = @"
