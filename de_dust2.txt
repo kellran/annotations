@@ -1,65 +1,68 @@
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-  MapName = "de_dust2"
-  ScreenText =
-  {
-  }
-  MapAnnotationNode0 =
-  {
-    Enabled = true
-    Type = "position"
-    Id = "0674693e-97bd-402b-b4b4-c4fe3348d8ea"
-    SubType = "main"
-    Position = [ 916.032471, 1123.968750, 64.906296 ]
-    Angles = [ -57.785061, 77.579124, 0.000000 ]
-    VisiblePfx = true
-    Color = [ 255, 255, 255 ]
-    TextPositionOffset = [ 0.0, 0.0, 60.0 ]
-    TextFacePlayer = true
-    TextHorizontalAlign = "center"
-    RevealOnSuccess = false
-    Title =
-    {
-      Text = "CT Cross"
-      FontSize = 125
-      FadeInDist = 600.0
-      FadeOutDist = 40.0
-    }
-    Desc =
-    {
-      Text = ""
-      FontSize = 75
-      FadeInDist = 300.0
-      FadeOutDist = 40.0
-    }
-  }
-  MapAnnotationNode1 =
-  {
-    Enabled = true
-    Type = "spot"
-    Id = "3ca8a18f-0025-412f-a5b0-10ae9563970d"
-    SubType = "main"
-    Position = [ 916.032471, 1123.968750, 64.906296 ]
-    Angles = [ -57.785061, 77.579124, 0.000000 ]
-    VisiblePfx = false
-    Color = [ 255, 255, 255 ]
-    TextPositionOffset = [ 0.0, 0.0, 60.0 ]
-    TextFacePlayer = false
-    TextHorizontalAlign = "center"
-    RevealOnSuccess = false
-    Title =
-    {
-      Text = ""
-      FontSize = 125
-      FadeInDist = 50.0
-      FadeOutDist = -1.0
-    }
-    Desc =
-    {
-      Text = ""
-      FontSize = 75
-      FadeInDist = 50.0
-      FadeOutDist = -1.0
-    }
-  }
+	MapName = "de_dust2"
+	ScreenText = 
+	{
+	}
+	MapAnnotationNode0 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "4f2f0b14-3d59-4c52-bccf-6530ec0a5af4"
+		SubType = "main"
+		Position = [ 916.03125, 1123.96875, 1.416784 ]
+		Angles = [ 0.0, 77.781494, 0.0 ]
+		VisiblePfx = true
+		Color = [ 255, 255, 255 ]
+		TextPositionOffset = [ 0.0, 0.0, 60.0 ]
+		TextFacePlayer = true
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Smoke CT Cross"
+			FontSize = 125
+			FadeInDist = 600.0
+			FadeOutDist = 40.0
+		}
+		Desc = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 300.0
+			FadeOutDist = 40.0
+		}
+		StreakLimitGuidesOn = 2
+		StreakLimitGuidesOff = 2
+		JumpThrow = false
+	}
+	MapAnnotationNode1 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "828e6242-ab24-49ed-be5d-abf7bd8a0b60"
+		SubType = "aim_target"
+		Position = [ 927.617981, 1176.256592, 149.355804 ]
+		Angles = [ -57.617897, 77.505424, 0.0 ]
+		VisiblePfx = true
+		TextPositionOffset = [ 0.0, 0.0, 30.0 ]
+		TextFacePlayer = false
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Smoke CT Cross"
+			FontSize = 125
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		Desc = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		MasterNodeId = "4f2f0b14-3d59-4c52-bccf-6530ec0a5af4"
+	}
 }
