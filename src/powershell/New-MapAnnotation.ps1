@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
@@ -66,7 +66,7 @@ $PositionGuid = (New-Guid).Guid
 $SpotGuid = (New-Guid).Guid
 $AnnotationNumber = ($FileContent -match "MapAnnotationNode\d+").Count
 $PositionAnnotation = @"
-  MapAnnotationNode$AnnotationNumber
+  MapAnnotationNode$AnnotationNumber =
   {
     Enabled = true
     Type = "position"
@@ -97,7 +97,7 @@ $PositionAnnotation = @"
   }
 "@
 $SpotAnnotation = @"
-  MapAnnotationNode$($AnnotationNumber + 1)
+  MapAnnotationNode$($AnnotationNumber + 1) =
   {
     Enabled = true
     Type = "spot"
