@@ -58,7 +58,7 @@
 		}
 		Desc = 
 		{
-			Text = ""
+			Text = "Middle click, jump throw"
 			FontSize = 75
 			FadeInDist = 50.0
 			FadeOutDist = -1.0
