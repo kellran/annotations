@@ -164,6 +164,7 @@ $SpotAnnotation = @"
       FadeInDist = 50.0
       FadeOutDist = -1.0
     }
+    MasterNodeId = "$PositionGuid"
   }
 "@
 
