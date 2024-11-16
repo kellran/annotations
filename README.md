@@ -27,14 +27,12 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 - Modify the 3 newest annotations (those in the bottom of the file), the following properties are useful to check:
   - For the first annotation (the position annotation):
     - `Color`: The color of the annotation, see [Color codes](#color-codes)
-    - `Title.Text`: The text displayed for the position, e.g. the title of the lineup
-    - `Desc.Text`: A second line of text for the , useful for advanced instructions
+    - `Desc.Text`: A second line of text for the standing position, useful for advanced instructions
   - For the second annotation (the lineup/marker annotation):
-    - `Title.Text`: The text displayed above the lineup markers, commonly used to describe the type of throw needed,
-    e.g. "Middle click, jump throw"
-    - `Desc.Text`: A second line of text for instructions, useful for advanced lineups
+    - `Desc.Text`: A second line of text for aiming instructions, useful for advanced lineups, and to instruct the type
+    of throw, e.g. "Middle click, jump throw", make sure to remove the 'aim instructions'
   - For the third annotation (the destination annotation):
-    - `DistanceThreshold`: The size of the target, useful for showing the accuracy needed for the lineup
+    - `DistanceThreshold`: The size of the target circle, useful for showing the accuracy needed for the lineup
 
 ## Annotation Commands
 
