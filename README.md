@@ -12,11 +12,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 
 - Git clone this repository in the csgo directory
 - Rename the directory from `CS2-annotations` to `annotations`
-- Start the game, select *practice*, choose a map, and make sure to enable:
-  - Grenade Camera
-  - Infinite Ammo
-  - Infinite Warmup
-  - Load Map Guide
+- Start the game, select *practice*, choose a map, enable 'Load Map Guide' and load the map.
 - Start a competitive practice game, with the annotations will be loaded automatically
 
 ## Commands for creating annotations
