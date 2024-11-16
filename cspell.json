@@ -1,0 +1,15 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "csgo",
+        "getpos",
+        "setang",
+        "setpos",
+        "steamapps"
+    ],
+    "ignoreWords": [],
+    "import": []
+}

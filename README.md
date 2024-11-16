@@ -29,7 +29,7 @@ Annotations use the annotation_* commands in the console. Below are some useful 
   help text needs to be customized in the annotations file manually.
   - `annotation_create position "text"`: Adds a position on the map with the given text and displayed with a pair of
   boots
-  - `annotation_create spot`: Creates two markers/crosshairs where you are looking to help you align your lineup.
+  - `annotation_create spot`: Creates two markers where you are looking to help you align your lineup.
   - `annotation_create text "free text" "extra text" float`: Creates a text floating in the air at where you are
   looking. Useful for providing additional information, such as what the lineup is for. the "extra text" parameter is
   optional, and provides a second line of text.
