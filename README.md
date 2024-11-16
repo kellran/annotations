@@ -1,4 +1,4 @@
-# CS2-Annotations
+﻿# CS2-Annotations
 
 This repository contains utility lineups for Counter-Strike 2, using the built-in annotations feature.
 
@@ -15,7 +15,28 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 - Start the game, select *practice*, choose a map, enable 'Load Map Guide' and load the map.
 - Start a competitive practice game, with the annotations will be loaded automatically
 
-## Commands for creating annotations
+## Creating annotations in-game
+
+- Start the game with annotations enabled (see above or use sv_allow_annotations 1)
+- Throw the lineup you want to create annotations for (this is important to record the destination target, whether it is
+  a jump throw, etc.)
+- Open the console and type `annotation_create grenade newLineup`
+- Save the annotations with `annotation_save de_map-name`
+- Open the annotation file in the annotations directory and copy the new annotations to this repository,
+  or just use git method under [Usage](#usage)
+- Modify the 3 newest annotations (those in the bottom of the file), the following properties are useful to check:
+  - For the first annotation (the position annotation):
+    - `Color`: The color of the annotation, see [Color codes](#color-codes)
+    - `Title.Text`: The text displayed for the position, e.g. the title of the lineup
+    - `Desc.Text`: A second line of text for the , useful for advanced instructions
+  - For the second annotation (the lineup/marker annotation):
+    - `Title.Text`: The text displayed above the lineup markers, commonly used to describe the type of throw needed,
+    e.g. "Middle click, jump throw"
+    - `Desc.Text`: A second line of text for instructions, useful for advanced lineups
+  - For the third annotation (the destination annotation):
+    - `DistanceThreshold`: The size of the target, useful for showing the accuracy needed for the lineup
+
+## Annotation Commands
 
 Annotations use the annotation_* commands in the console. Below are some useful commands:
 
