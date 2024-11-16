@@ -65,3 +65,16 @@ color codes are as follows:
 - `white`: [ 255, 255, 255 ]
 - `ct-blue`: [ 151, 201, 250 ]
 - `t-yellow`: [ 234, 191, 86 ]
+
+## Contributing
+
+The following items are pending work, and contributions are welcome:
+
+- Add more lineups
+- Add more advanced instructions to the annotations
+- Make unit tests for:
+  - The header of the annotation file
+  - The number of annotations in the file can not exceed 100
+  - 'aim instructions' in the second annotation should be removed
+  - Any other useful tests
+- Release as a zip file to extract directly to the csgo directory (and update the README.md accordingly)
