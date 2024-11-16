@@ -22,6 +22,8 @@ Annotations use the annotation_* commands in the console. Below are some useful 
 - `annotation_create`: Creates a new lineup, described below. Omit parameters to get help text.
   The below commands can be used in combination to provide a more detailed lineup, with where to stand, where to aim,
   etc.
+  - `annotation_create grenade text`: Creates a set of annotations with predefined values and uses a grenade icon with
+  an arrow to help find the lineup. the text field becomes the name of the lineup.
   - `annotation_create position "text"`: Adds a position on the map with the given text and displayed with a pair of
   boots
   - `annotation_create spot`: Creates two markers/crosshairs where you are looking to help you align your lineup.
@@ -31,3 +33,4 @@ Annotations use the annotation_* commands in the console. Below are some useful 
   - `annotation_create text "free text" "extra text" surface`: Similar to the above command, but the text is attached to
   a wall or similar
 - `annotation_save <filename>`: Save the current annotations to a file, after doing so copy it back to this repository
+- `annotation_reload`: Reload the annotations, useful when creating new annotations
