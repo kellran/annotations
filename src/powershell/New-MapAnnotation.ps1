@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
   This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
@@ -14,6 +14,17 @@
   The movement type of the lineup, e.g. jump-throw
 .PARAMETER distance
   The distance type of the lineup, e.g. left-click
+.PARAMETER AimText
+  The text that will be displayed when standing in the correct position and looking at the spot annotation,
+  useful for providing additional information
+.PARAMETER StandingHelpText
+  2nd line of text that will be displayed on the position annotation, useful for providing additional information
+.PARAMETER AimInstructions
+  The text that will be displayed when standing in the correct position and looking at the spot annotation,
+  useful for providing additional information
+.PARAMETER Color
+  The color of the annotation, e.g. white, ct-blue, t-yellow
+  Useful for color coding the annotations to make them easier to distinguish which team they are intended for
 #>
 param(
     [Parameter(Mandatory)]
@@ -31,8 +42,28 @@ param(
 
     [Parameter()]
     [ValidateSet("left-click", "middle-click", "right-click")]
-    [string]$distance = "left-click"
+    [string]$distance = "left-click",
+
+    [Parameter()]
+    [string]$AimText = "",
+
+    [Parameter()]
+    [string]$StandingHelpText = "",
+
+    [Parameter()]
+    [string]$AimInstructions = "",
+
+    [Parameter()]
+    [ValidateSet("white", "ct-blue", "t-yellow")]
+    [string]$Color = "white"
 )
+
+# Convert the color to the correct format (RGB)
+$ColorCode = switch ($Color) {
+    "white" { "[ 255, 255, 255 ]" }
+    "ct-blue" { "[ 151, 201, 250 ]" }
+    "t-yellow" { "[ 234, 191, 86 ]" }
+}
 
 $RootPath = "$PSScriptRoot/../../"
 
@@ -83,7 +114,7 @@ $PositionAnnotation = @"
     Position = $position
     Angles = $angle
     VisiblePfx = true
-    Color = [ 255, 255, 255 ]
+    Color = $ColorCode
     TextPositionOffset = [ 0.0, 0.0, 60.0 ]
     TextFacePlayer = true
     TextHorizontalAlign = "center"
@@ -97,7 +128,7 @@ $PositionAnnotation = @"
     }
     Desc =
     {
-      Text = ""
+      Text = "$StandingHelpText"
       FontSize = 75
       FadeInDist = 300.0
       FadeOutDist = 40.0
@@ -114,21 +145,21 @@ $SpotAnnotation = @"
     Position = $position
     Angles = $angle
     VisiblePfx = false
-    Color = [ 255, 255, 255 ]
+    Color = $ColorCode
     TextPositionOffset = [ 0.0, 0.0, 60.0 ]
     TextFacePlayer = false
     TextHorizontalAlign = "center"
     RevealOnSuccess = false
     Title =
     {
-      Text = ""
+      Text = "$AimText"
       FontSize = 125
       FadeInDist = 50.0
       FadeOutDist = -1.0
     }
     Desc =
     {
-      Text = ""
+      Text = "$AimInstructions"
       FontSize = 75
       FadeInDist = 50.0
       FadeOutDist = -1.0
