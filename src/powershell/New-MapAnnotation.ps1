@@ -14,9 +14,6 @@
   The movement type of the lineup, e.g. jump-throw
 .PARAMETER distance
   The distance type of the lineup, e.g. left-click
-.PARAMETER AimText
-  The text that will be displayed when standing in the correct position and looking at the spot annotation,
-  useful for providing additional information
 .PARAMETER StandingHelpText
   2nd line of text that will be displayed on the position annotation, useful for providing additional information
 .PARAMETER AimInstructions
@@ -43,9 +40,6 @@ param(
     [Parameter()]
     [ValidateSet("left-click", "middle-click", "right-click")]
     [string]$distance = "left-click",
-
-    [Parameter()]
-    [string]$AimText = "",
 
     [Parameter()]
     [string]$StandingHelpText = "",
@@ -152,7 +146,7 @@ $SpotAnnotation = @"
     RevealOnSuccess = false
     Title =
     {
-      Text = "$AimText"
+      Text = "$distance"
       FontSize = 125
       FadeInDist = 50.0
       FadeOutDist = -1.0
