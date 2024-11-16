@@ -23,7 +23,10 @@ Annotations use the annotation_* commands in the console. Below are some useful 
   The below commands can be used in combination to provide a more detailed lineup, with where to stand, where to aim,
   etc.
   - `annotation_create grenade text`: Creates a set of annotations with predefined values and uses a grenade icon with
-  an arrow to help find the lineup. the text field becomes the name of the lineup.
+  an arrow to help find the lineup. the text field becomes the name of the lineup. This also results in the lineup
+  having a success-score, where after 2 successful throws, the help text and icons will disappear, and you will have to
+  line it up yourself for 2 more successful throws. This is the recommended way to create lineups, but do note that the
+  help text needs to be customized in the annotations file manually.
   - `annotation_create position "text"`: Adds a position on the map with the given text and displayed with a pair of
   boots
   - `annotation_create spot`: Creates two markers/crosshairs where you are looking to help you align your lineup.
