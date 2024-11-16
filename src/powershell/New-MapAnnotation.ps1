@@ -135,7 +135,7 @@ $SpotAnnotation = @"
     Enabled = true
     Type = "spot"
     Id = "$SpotGuid"
-    SubType = "main"
+    SubType = "aim_target"
     Position = $position
     Angles = $angle
     VisiblePfx = false
@@ -164,7 +164,7 @@ $SpotAnnotation = @"
 
 # Add the new annotation to the file
 
-# Find the last closing curly bracket
+# Find the last closing curly bracket, so we know where to insert the new annotation
 for ($i = $FileContent.Length - 1; $i -ge 0; $i--) {
     if ($FileContent[$i] -eq "}") {
         $lastClosingBraceIndex = $i
