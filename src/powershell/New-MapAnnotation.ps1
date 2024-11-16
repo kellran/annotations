@@ -2,12 +2,13 @@
 .SYNOPSIS
   This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
-  Takes an input of a setpos and creates a 'spot' and 'position' map annotation
+  Takes an input of a setpos_exact and creates a 'set of' map annotations for the given map.
 .PARAMETER name
   The name of the lineup
-.PARAMETER setpos
-  The setpos including the angle, e.g.
-  setpos 916.032471 1123.968750 64.906296;setang -57.785061 77.579124 0.000000
+.PARAMETER setpos_exact
+  The setpos_exact from the CS2 console, retrieved using the getpos_exact command.
+  NOTE: The setpos_exact doesn't set the angle in game, but the angle is correct, and works with the map annotations.
+  e.g. setpos_exact 916.033264 1123.968750 1.416782;setang_exact 0.000000 90.921143 0.00000
 .PARAMETER mapName
   The name of the map, e.g. de_mirage
 .PARAMETER movement
@@ -28,7 +29,7 @@ param(
     [string]$name,
 
     [Parameter(Mandatory)]
-    [string]$setpos,
+    [string]$setpos_exact,
 
     [Parameter(Mandatory)]
     [string]$mapName,
@@ -62,8 +63,8 @@ $ColorCode = switch ($Color) {
 $RootPath = "$PSScriptRoot/../../"
 
 # Validate input
-if ($setpos -notmatch "^setpos (?<StandingX>-?\d+\.\d+) (?<StandingY>-?\d+\.\d+) (?<StandingZ>-?\d+\.\d+);setang (?<AngleX>-?\d+\.\d+) (?<AngleY>-?\d+\.\d+) (?<AngleZ>-?\d+\.\d+)$") {
-    throw "Invalid setpos: $setpos"
+if ($setpos_exact -notmatch "^setpos_exact (?<StandingX>-?\d+\.\d+) (?<StandingY>-?\d+\.\d+) (?<StandingZ>-?\d+\.\d+);setang_exact (?<AngleX>-?\d+\.\d+) (?<AngleY>-?\d+\.\d+) (?<AngleZ>-?\d+\.\d+)$") {
+    throw "Invalid setpos_exact: $setpos_exact"
 }
 
 # Generate variables based of match
@@ -96,7 +97,6 @@ Remove-Variable matches
 
 # Since the annotation numbers start at 0, the return of 'Count' would be the next annotation number.
 $PositionGuid = (New-Guid).Guid
-$SpotGuid = (New-Guid).Guid
 $AnnotationNumber = ($FileContent -match "MapAnnotationNode\d+").Count
 $PositionAnnotation = @"
   MapAnnotationNode$AnnotationNumber =
@@ -134,7 +134,7 @@ $SpotAnnotation = @"
   {
     Enabled = true
     Type = "spot"
-    Id = "$SpotGuid"
+    Id = "$((New-Guid).Guid)"
     SubType = "aim_target"
     Position = $position
     Angles = $angle
@@ -175,7 +175,7 @@ for ($i = $FileContent.Length - 1; $i -ge 0; $i--) {
 # Split the content into two parts: before and after the last closing brace
 $beforeLastBrace = $fileContent[0..$($lastClosingBraceIndex-1)]
 
-# Insert the new annotation before the last closing brace
+# Insert the new annotation before the last closing brace, and add the closing brace back
 $modifiedContent = $beforeLastBrace + $PositionAnnotation + $SpotAnnotation + "}"
 
 # Save the modified content back to the file
