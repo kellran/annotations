@@ -1,4 +1,4 @@
-﻿# CS2-Annotations
+# CS2-Annotations
 
 This repository contains utility lineups for Counter-Strike 2, using the built-in annotations feature.
 
@@ -37,3 +37,12 @@ Annotations use the annotation_* commands in the console. Below are some useful 
   a wall or similar
 - `annotation_save <filename>`: Save the current annotations to a file, after doing so copy it back to this repository
 - `annotation_reload`: Reload the annotations, useful when creating new annotations
+
+## Color codes
+
+It is possible to change the color of the annotations by modifying the `Color` field in the annotation file. The ingame
+color codes are as follows:
+
+- `white`: [ 255, 255, 255 ]
+- `ct-blue`: [ 151, 201, 250 ]
+- `t-yellow`: [ 234, 191, 86 ]
