@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     This script creates a new map annotation based of a setpos from cs2.
 .DESCRIPTION
@@ -34,8 +34,8 @@ if ($setpos -notmatch "^setpos (?<StandingX>-?\d+\.\d+) (?<StandingY>-?\d+\.\d+)
 }
 
 # Generate variables based of match
-$angle = "[ $($Matches['AngleX']) $($Matches['AngleY']) $($Matches['AngleZ']) ]"
-$position = "[ $($Matches['StandingX']) $($Matches['StandingY']) $($Matches['StandingZ']) ]"
+$angle = "[ $($Matches['AngleX']), $($Matches['AngleY']), $($Matches['AngleZ']) ]"
+$position = "[ $($Matches['StandingX']), $($Matches['StandingY']), $($Matches['StandingZ']) ]"
 
 # Find the map, create it if it doesn't exist
 $MapFileInfo = Get-Item -Path "$mapName.txt" -ErrorAction "SilentlyContinue"
