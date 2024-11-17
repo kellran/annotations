@@ -77,4 +77,9 @@ The following items are pending work, and contributions are welcome:
   - The number of annotations in the file can not exceed 100
   - 'aim instructions' in the second annotation should be removed
   - Any other useful tests
+  - MapAnnotations should:
+    - Have a unique number
+    - Have a unique id
+    - Be numbered in increasing order, by increments of 1
 - Release as a zip file to extract directly to the csgo directory (and update the README.md accordingly)
+  - Should only be done on updates to files matching this filter: 'de_*.txt' in the root directory
