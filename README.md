@@ -90,3 +90,4 @@ The following items are pending work, and contributions are welcome:
     - Have a unique number
     - Have a unique id
     - Be numbered in increasing order, by increments of 1
+    - Have a unique Position and TextPositionOffset (same position is allowed, if the offset is different)
