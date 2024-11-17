@@ -14,6 +14,8 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 
 - Download the latest release from the [releases page](https://github.com/ReneRebsdorf/CS2-annotations/releases)
 - Extract the zip file to the csgo directory, replace any files if prompted
+- Start the game, select *practice*, choose a map, enable 'Load Map Guide' and load the map.
+- Start a competitive practice game, with the annotations will be loaded automatically
 
 ### Using git (advanced)
 
