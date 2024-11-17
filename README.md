@@ -12,17 +12,17 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 
 ### Using the zip file (recommended)
 
-- Download the latest release from the [releases page](https://github.com/ReneRebsdorf/CS2-annotations/releases)
-- Extract the zip file to the csgo directory, replace any files if prompted
-- Start the game, select *practice*, choose a map, enable 'Load Map Guide' and load the map.
-- Start a competitive practice game, with the annotations will be loaded automatically
+- Download the latest 'annotations.zip' file from the [releases page](https://github.com/ReneRebsdorf/CS2-annotations/releases)
+- Extract the zip file to the csgo directory (path mentioned above), replace any files if prompted
+- Start the game, select *practice* in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go' to launch the server.
+- Start a competitive practice game, the annotations will be loaded automatically
 
 ### Using git (advanced)
 
 - Git clone this repository in the csgo directory
 - Rename the directory from `CS2-annotations` to `annotations`
-- Start the game, select *practice*, choose a map, enable 'Load Map Guide' and load the map.
-- Start a competitive practice game, with the annotations will be loaded automatically
+- Start the game, select *practice* in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go' to launch the server.
+- Start a competitive practice game, the annotations will be loaded automatically
 
 ## Creating annotations in-game
 
