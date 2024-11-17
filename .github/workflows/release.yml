@@ -1,0 +1,72 @@
+﻿---
+name: Release
+run-name: ${{ github.actor }} is deploying infrastructure
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  deploy-bicep:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    - name: Generate parameter file
+      env:
+        STEAMUSER: ${{ secrets.STEAMUSER }}
+        STEAMPASS: ${{ secrets.STEAMPASS }}
+        STEAMGUARD: ${{ secrets.STEAMGUARD }}
+        CS2_PW: ${{ secrets.CS2_PW }}
+        CS2_RCONPW: ${{ secrets.CS2_RCONPW }}
+        CS2_SERVERNAME: ${{ vars.CS2_SERVERNAME }}
+      run: |
+        cat << EOL > infrastructure/azure/azureDeploy.parameters.json
+        {
+          "STEAMUSER": {
+            "value": "$STEAMUSER"
+          },
+          "STEAMPASS": {
+            "value": "$STEAMPASS"
+          },
+          "STEAMGUARD": {
+            "value": "$STEAMGUARD"
+          },
+          "CS2_PW": {
+            "value": "$CS2_PW"
+          },
+          "CS2_RCONPW": {
+            "value": "$CS2_RCONPW"
+          },
+          "CS2_SERVERNAME": {
+            "value": "$CS2_SERVERNAME"
+          }
+        }
+        EOL
+    - name: Deploy bicep
+      id: deploy-bicep
+      env:
+        ENV_NAME: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+      run: |
+        rgName="cs-server-$ENV_NAME"
+        deploymentName="$(date +%s)"
+        az deployment group create \
+          -g "$rgName" \
+          --template-file "infrastructure/azure/main.bicep" \
+          --parameters "infrastructure/azure/azureDeploy.parameters.json" \
+          -n "$deploymentName"
+    - name: Verify Container
+      run: |
+       abc
