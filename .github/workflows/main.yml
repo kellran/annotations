@@ -12,10 +12,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Build
+        run: zip -r annotations.zip de_*.txt
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: de_*.txt
+          files: annotations.zip
           fail_on_unmatched_files: true
           generate_release_notes: true
           make_latest: true
