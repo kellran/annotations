@@ -32,7 +32,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 - Open the console and type `annotation_create grenade newLineup`
 - Save the annotations with `annotation_save de_map-name`
 - Open the annotation file in the annotations directory and copy the new annotations to this repository,
-  or just use git method under [Usage](#usage)
+  or just use [git method described under 'Usage'](#using-git-advanced)
 - Modify the 3 newest annotations (those in the bottom of the file), the following properties are useful to check:
   - For the first annotation (the position annotation):
     - `Color`: The color of the annotation, see [Color codes](#color-codes)
@@ -84,11 +84,9 @@ The following items are pending work, and contributions are welcome:
 - Make unit tests for:
   - The header of the annotation file
   - The number of annotations in the file can not exceed 100
-  - 'aim instructions' in the second annotation should be removed
+  - 'aim instructions' and 'standing instructions' should have been replaced or removed
   - Any other useful tests
   - MapAnnotations should:
     - Have a unique number
     - Have a unique id
     - Be numbered in increasing order, by increments of 1
-- Release as a zip file to extract directly to the csgo directory (and update the README.md accordingly)
-  - Should only be done on updates to files matching this filter: 'de_*.txt' in the root directory
