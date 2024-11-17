@@ -1,22 +1,4 @@
-﻿name: Release
-on:
-  push:
-    tags:
-      - "v*.*.*"
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: de_*.txt
-          fail_on_unmatched_files: true
-          generate_release_notes: true
-          make_latest: true
-changelog:
+﻿changelog:
   exclude:
     labels:
       - ignore-for-release
