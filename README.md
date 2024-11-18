@@ -1,4 +1,4 @@
-﻿# CS2-Annotations
+# CS2-Annotations
 
 This repository contains utility lineups for Counter-Strike 2, using the built-in annotations feature.
 
@@ -85,17 +85,6 @@ The current tests are implemented using `pytest`. To run the tests it is recomme
 
 ## Contributing
 
-The following items are pending work, and contributions are welcome:
-
-- Add more lineups
-- Add more advanced instructions to the annotations
-- Make unit tests for:
-  - The header of the annotation file
-  - The number of annotations in the file can not exceed 100
-  - 'aim instructions' and 'standing instructions' should have been replaced or removed
-  - Any other useful tests
-  - MapAnnotations should:
-    - Have a unique number
-    - Have a unique id
-    - Be numbered in increasing order, by increments of 1
-    - Have a unique Position and TextPositionOffset (same position is allowed, if the offset is different)
+Contributions are warmly welcomed. Please create a pull request with your changes, and they will be reviewed as soon as
+possible. The [issue tracker](https://github.com/ReneRebsdorf/CS2-annotations/issues) is also open for any suggestions
+or bugs found.
