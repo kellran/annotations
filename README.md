@@ -1,4 +1,4 @@
-# CS2-Annotations
+﻿# CS2-Annotations
 
 This repository contains utility lineups for Counter-Strike 2, using the built-in annotations feature.
 
@@ -12,16 +12,19 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 
 ### Using the zip file (recommended)
 
-- Download the latest 'annotations.zip' file from the [releases page](https://github.com/ReneRebsdorf/CS2-annotations/releases)
+- Download the latest 'annotations.zip' file from the
+  [releases page](https://github.com/ReneRebsdorf/CS2-annotations/releases)
 - Extract the zip file to the csgo directory (path mentioned above), replace any files if prompted
-- Start the game, select _practice_ in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go' to launch the server.
+- Start the game, select _practice_ in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go'
+  to launch the server.
 - Start a competitive practice game, the annotations will be loaded automatically
 
 ### Using git (advanced)
 
 - Git clone this repository in the csgo directory
 - Rename the directory from `CS2-annotations` to `annotations`
-- Start the game, select _practice_ in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go' to launch the server.
+- Start the game, select _practice_ in the top menu, choose a map, enable 'Load Map Guide' on the left, and click 'Go'
+  to launch the server.
 - Start a competitive practice game, the annotations will be loaded automatically
 
 ## Creating annotations in-game
@@ -68,7 +71,7 @@ Annotations use the annotation\_\* commands in the console. Below are some usefu
 
 ## Color codes
 
-It is possible to change the color of the annotations by modifying the `Color` field in the annotation file. The ingame
+It is possible to change the color of the annotations by modifying the `Color` field in the annotation file. The in-game
 color codes are as follows:
 
 - `white`: [ 255, 255, 255 ]
