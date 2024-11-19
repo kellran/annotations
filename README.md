@@ -83,7 +83,7 @@ color codes are as follows:
 The current tests are implemented using `pytest`. To run the tests it is recommended to create a virtual environment.
 
 - Run `python -m venv .venv`
-- Activate the virtual environment. Ie. with `./.venv/bin/Activate.ps1` or similar
+- Activate the virtual environment. Ie. with `./.venv/bin/Activate.ps1`, `./.venv/Scripts/Activate.ps1` or similar
 - Run `pytest` or `pytest --verbose`. It will discover tests in the `tests` folder and execute all the discovered tests.
 
 ## Contributing
