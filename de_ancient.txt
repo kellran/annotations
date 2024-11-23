@@ -2279,4 +2279,95 @@
 		MasterNodeId = "1809464c-8823-4e19-a8e3-70c00d063465"
 		DistanceThreshold = 80.0
 	}
+	MapAnnotationNode75 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "1fd34808-4c8d-4aa8-b3ed-d5a6f717204b"
+		SubType = "main"
+		Position = [ -286.100098, 1771.964966, 28.201561 ]
+		Angles = [ 0.0, -46.811707, 0.0 ]
+		VisiblePfx = true
+		Color = [ 151, 201, 250 ]
+		TextPositionOffset = [ 0.0, 0.0, 60.0 ]
+		TextFacePlayer = true
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Smoke B doors"
+			FontSize = 125
+			FadeInDist = 600.0
+			FadeOutDist = 40.0
+		}
+		Desc = 
+		{
+			Text = "Left side of steps"
+			FontSize = 75
+			FadeInDist = 300.0
+			FadeOutDist = 40.0
+		}
+		StreakLimitGuidesOn = 2
+		StreakLimitGuidesOff = 2
+		JumpThrow = true
+	}
+	MapAnnotationNode76 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "dec42eda-1a9b-4e49-8357-ab1e58ddec8d"
+		SubType = "aim_target"
+		Position = [ -226.052231, 1701.11377, 127.54776 ]
+		Angles = [ -21.760191, -49.718056, 0.0 ]
+		VisiblePfx = true
+		TextPositionOffset = [ 0.0, 0.0, 30.0 ]
+		TextFacePlayer = false
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Smoke B doors"
+			FontSize = 125
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		Desc = 
+		{
+			Text = "Aim at the edge of platform on tower\nRun forward until crosshair reaches the top of the plant\nLeft click jump throw"
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		MasterNodeId = "1fd34808-4c8d-4aa8-b3ed-d5a6f717204b"
+	}
+	MapAnnotationNode77 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "2adc1eb2-127e-4618-973c-b7edda9f1a40"
+		SubType = "destination"
+		Position = [ 1102.567261, -984.170349, 5.528252 ]
+		Angles = [ -21.760191, -49.718056, 0.0 ]
+		VisiblePfx = true
+		TextPositionOffset = [ 0.0, 0.0, 0.0 ]
+		TextFacePlayer = false
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		Desc = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		MasterNodeId = "1fd34808-4c8d-4aa8-b3ed-d5a6f717204b"
+		DistanceThreshold = 80.0
+	}
 }
