@@ -2188,4 +2188,95 @@
 		MasterNodeId = "9d0ff488-d80d-4203-80df-873fb1cdd2b4"
 		DistanceThreshold = 80.0
 	}
+	MapAnnotationNode72 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "1809464c-8823-4e19-a8e3-70c00d063465"
+		SubType = "main"
+		Position = [ 1116.37207, -961.798828, 3.528252 ]
+		Angles = [ 0.0, 124.057281, 0.0 ]
+		VisiblePfx = true
+		Color = [ 234, 191, 86 ]
+		TextPositionOffset = [ 0.0, 0.0, 60.0 ]
+		TextFacePlayer = true
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Vent Molotov"
+			FontSize = 125
+			FadeInDist = 600.0
+			FadeOutDist = 40.0
+		}
+		Desc = 
+		{
+			Text = "Infront of left most flower (not the door handle)"
+			FontSize = 75
+			FadeInDist = 300.0
+			FadeOutDist = 40.0
+		}
+		StreakLimitGuidesOn = 2
+		StreakLimitGuidesOff = 2
+		JumpThrow = true
+	}
+	MapAnnotationNode73 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "9c9cb3c6-26c7-4f71-a353-3e54b3b0654f"
+		SubType = "aim_target"
+		Position = [ 1054.606567, -884.732056, 83.044342 ]
+		Angles = [ -9.018937, 128.710556, 0.0 ]
+		VisiblePfx = true
+		TextPositionOffset = [ 0.0, -40.0, 0.0 ]
+		TextFacePlayer = false
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = "Vent Molotov"
+			FontSize = 125
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		Desc = 
+		{
+			Text = "Aim at the top right corner of the brick\nRun forward until crosshair reaches bottom right corner of brick\nLeft click jump throw"
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		MasterNodeId = "1809464c-8823-4e19-a8e3-70c00d063465"
+	}
+	MapAnnotationNode74 = 
+	{
+		Enabled = true
+		Type = "grenade"
+		Id = "7de68348-d9c1-40d8-b959-1263f61671c3"
+		SubType = "destination"
+		Position = [ 480.077057, -325.944305, 296.767914 ]
+		Angles = [ -9.018937, 128.710556, 0.0 ]
+		VisiblePfx = true
+		TextPositionOffset = [ 0.0, 0.0, 0.0 ]
+		TextFacePlayer = false
+		TextHorizontalAlign = "center"
+		RevealOnSuccess = false
+		Title = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		Desc = 
+		{
+			Text = ""
+			FontSize = 75
+			FadeInDist = 50.0
+			FadeOutDist = -1.0
+		}
+		MasterNodeId = "1809464c-8823-4e19-a8e3-70c00d063465"
+		DistanceThreshold = 80.0
+	}
 }
